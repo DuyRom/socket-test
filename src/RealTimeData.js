@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-const SOCKET_SERVER_URL = 'wss://stream.binance.com:9443/ws/btcusdt@trade';
+// const SOCKET_SERVER_URL = 'wss://stream.binance.com:9443/ws/btcusdt@trade';
+const SOCKET_SERVER_URL = 'https://ws1.odinbi.app';
 
 const RealTimeData = () => {
     const [data, setData] = useState(null);
@@ -29,7 +30,7 @@ const RealTimeData = () => {
 
     return (
         <div>
-            <h1>Real Time Data</h1>
+            <h1>Test Real Time Data</h1>
             {data ? <pre>{JSON.stringify(data, null, 2)}</pre> : <p>No data received yet...</p>}
         </div>
     );
